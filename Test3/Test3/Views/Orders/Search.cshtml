@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Test3.Models.Product>
+
+<h2>Search Results</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <p>No products found.</p>
+}
+else
+{
+    <div class="row g-3">
+        @foreach (var product in Model)
+        {
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.ProductName</h5>
+                        <p class="card-text">@product.ProductDesc</p>
+                        <p>Category: @product.Category</p>
+                        <p class="text-success">In Stock</p>
+                        <form asp-controller="Orders" asp-action="AddToOrder" method="post">
+                            <input type="hidden" name="productId" value="@product.ProductID" />
+                            <button type="submit" class="btn btn-primary">Order Item</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
