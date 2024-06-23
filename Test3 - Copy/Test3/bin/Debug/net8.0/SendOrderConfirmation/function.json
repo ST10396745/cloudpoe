@@ -1,0 +1,13 @@
+{
+  "generatedBy": "Microsoft.NET.Sdk.Functions.Generator-4.4.0",
+  "configurationSource": "attributes",
+  "bindings": [
+    {
+      "type": "activityTrigger",
+      "name": "orderDetails"
+    }
+  ],
+  "disabled": false,
+  "scriptFile": "../bin/Test3.dll",
+  "entryPoint": "InventoryFunctions.SendOrderConfirmation"
+}

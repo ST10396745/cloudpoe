@@ -1,0 +1,39 @@
+﻿<!-- Views/Home/Index.cshtml -->
+@model dynamic // If dynamic content is involved, otherwise, remove this line
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Welcome to KhumaloCraft</h1>
+        <p>Discover the beauty of handmade treasures from artisans around the world.</p>
+        <a class="btn btn-primary btn-lg" href="~/Products/ClientView" role="button">Explore Now</a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>About Us</h2>
+            <p>Learn more about our story, mission, and values.</p>
+            <a class="btn btn-secondary" href="~/Home/AboutUs" role="button">Learn More</a>
+        </div>
+        <div class="col-md-4">
+            <h2>Our Products</h2>
+            <p>Explore our collection of handcrafted treasures.</p>
+            <a class="btn btn-secondary" href="~/Products/ClientView" role="button">Shop Now</a>
+        </div>
+        <div class="col-md-4">
+            <h2>Contact Us</h2>
+            <p>Have a question or feedback? Get in touch with us!</p>
+            <a class="btn btn-secondary" href="~/Home/ContactUs" role="button">Contact Us</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2024 KhumaloCraft. All rights reserved.</p>
+    </footer>
+</div>
+
